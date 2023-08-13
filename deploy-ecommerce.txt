@@ -32,11 +32,7 @@ sudo find /var/www -type f -exec sudo chmod 0664 {} \;
 
 
 #6. download the FleetCart zip from s3 to the html derectory on the ec2 instance
-sudo aws s3://myawbucket-web-files/FleetCart.zip /var/www/html
 sudo aws s3 sync s3://myawbucket-web-files /var/www/html
-
-aws s3 cp s3://myawbucket-web-files/FleetCart.zip /var/www/html/
-
 
 #7. unzip the FleetCart zip folder
 cd /var/www/html
